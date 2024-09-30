@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class ArticleController < ApplicationController
   def index
     @title = 'MIKU😘'
   end
