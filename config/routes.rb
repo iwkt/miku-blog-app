@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'article#index'
-  get '/about' => 'article#about'
-  get '/news' => 'article#news'
+  root to: 'articles#index'
+  get '/about' => 'articles#about'
+
+  resources :articles, only:[:show, :new, :create]
 end
